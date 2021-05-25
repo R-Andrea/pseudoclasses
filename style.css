@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    background-image: url("https://hackernoon.com/hn-images/1*iQxt6dphgZWVS5MeZROfWw.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#root:hover img {
+    width: 200px;
+    height: 200px;
+}
+
+#root button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    background-color: #FFCE00;
+}
+
+#root button:hover::before {
+    content: "haha";
+}
+
+#root button::after {
+    content: ""; /*content always required for ::before and ::after */
+    display: block; /*not sure if it's necessary */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #22B573;
+    transition: transform 1s;
+}
+
+#root button:hover::after {
+    transform: rotate(45deg);
+}
+
+#root:hover button {
+    background-color: #00263D;
+    color: #FFCE00;
+    border-bottom: 12px solid #FFCE00;
+}
